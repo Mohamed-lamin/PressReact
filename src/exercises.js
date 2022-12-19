@@ -46,14 +46,19 @@ function Exercices() {
             <h1 className="text-xs md:text-base font-bold mx-10 mt-10 mb-3">
               {item.name}
             </h1>
+
             {item.posts.nodes.map((itemsub, index) => (
-              <Link
-                to="/exercise"
-                state={{ content: itemsub.content }}
-                key={index}
-              >
-                {itemsub.title}
-              </Link>
+              <ul className=" mr-14 md:mr-20 list-disc">
+                <li className="m-1">
+                  <Link
+                    to="/exercise"
+                    state={{ content: itemsub.content }}
+                    key={index}
+                  >
+                    {itemsub.title}
+                  </Link>
+                </li>
+              </ul>
             ))}
           </div>
         ))}
