@@ -6,7 +6,7 @@ import HtmlTableToJson from "html-table-to-json"
 function Exercise(props) {
   const [table, setTable] = useState([])
   const location = useLocation()
-  const { content } = location.state
+  const { content, itemname } = location.state
 
   useEffect(() => {
     setTable(HtmlTableToJson.parse(content).results[0])
@@ -14,6 +14,7 @@ function Exercise(props) {
   return (
     <>
       <div className="w-full " dir="rtl">
+        <h1 className="text-xl font-bold text-blue-600">{itemname}</h1>
         <div>
           {table.map((item, index) => (
             <div key={index}>

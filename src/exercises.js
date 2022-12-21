@@ -52,7 +52,7 @@ function Exercices() {
                 <li className="m-1">
                   <Link
                     to="/exercise"
-                    state={{ content: itemsub.content }}
+                    state={{ content: itemsub.content, itemname: item.name }}
                     key={index}
                   >
                     {itemsub.title}
