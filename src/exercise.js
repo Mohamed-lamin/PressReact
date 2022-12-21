@@ -13,7 +13,7 @@ function Exercise(props) {
   }, [])
   return (
     <>
-      <div className="w-full ">
+      <div className="w-full " dir="rtl">
         <div>
           {table.map((item, index) => (
             <div key={index}>
@@ -21,7 +21,7 @@ function Exercise(props) {
                 key={item.index}
                 subject={item.subject}
                 vertoput={item.vertoput}
-                restofsentences={item.restofsentence}
+                restofsentence={item.restofsentence}
                 theverb={item.theverb}
               />
             </div>
